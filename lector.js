@@ -5,12 +5,8 @@ function loadLector(){
 		Quagga.init({
 			inputStream: {
 				// constraints: {
-				 	//width: 1920,
-				 	//height: 1080,
-				//	 width: 800,
-				 //	height: 600,
-					 //width: 600,
-					// height: 400,
+				// 	width: 1920,
+				// 	height: 1080,
 				// },
 				name: "Live",
 				type: "LiveStream",
@@ -18,7 +14,7 @@ function loadLector(){
 			},
 			decoder: {
 				readers: ["ean_reader"]
-				//readers: ["upc_reader"]
+				// readers: ["upc_reader"]
 			}
 		}, function (err) {
 			if (err) {
@@ -31,7 +27,23 @@ function loadLector(){
 	
 		Quagga.onDetected((data) => {
 			$resultados.textContent = data.codeResult.code;
-			document.getElementById("resultado").value = data.codeResult.code;
+
+			const datos = data.codeResult.code;
+			// const result = datos.indexOf(0,0);       
+	
+			if(datos.indexOf(0)===0){
+				// alert("0 esta adelante")
+				  const str = data.codeResult.code;
+					const newStr = str.slice(1)
+					document.getElementById("resultado").value="";
+					document.getElementById("resultado").value=newStr;
+			}else{
+				document.getElementById("resultado").value="";
+				document.getElementById("resultado").value=data.codeResult.code;
+			}
+
+
+			// document.getElementById("resultado").value = data.codeResult.code;
 			sound.play();	
 			// setTimeout(clickear, 500);
 			// function clickear(){

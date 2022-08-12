@@ -13,8 +13,8 @@ function loadLector(){
 				target: document.querySelector('#contenedor'), // Pasar el elemento del DOM
 			},
 			decoder: {
-				readers: ["ean_reader"],
-				readers: ["upc_reader"]
+				readers: ["ean_reader"]
+				//readers: ["upc_reader"]
 			}
 		}, function (err) {
 			if (err) {

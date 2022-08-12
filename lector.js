@@ -5,8 +5,8 @@ function loadLector(){
 		Quagga.init({
 			inputStream: {
 				constraints: {
-				width: 640,
-				height: 480,
+				width: 320,
+				height: 240,
 				facing: "environment"
 				},
 				name: "Live",
@@ -20,7 +20,7 @@ function loadLector(){
 			  numOfWorkers: 4,
 			  locate: true,
 			decoder: {
-				readers: ["upc_reader", "ean_reader"]
+				readers: ["upc_reader", "ean_8_reader", "ean_reader"]
 				// readers: ["upc_reader"]
 			}
 		}, function (err) {

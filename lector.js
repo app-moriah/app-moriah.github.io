@@ -5,8 +5,8 @@ function loadLector(){
 		Quagga.init({
 			inputStream: {
 				constraints: {
-				width: 1920,
-				height: 1080,
+				width: 1080,
+				height: 720,
 				facing: "environment"
 				},
 				name: "Live",

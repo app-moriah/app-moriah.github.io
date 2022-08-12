@@ -4,22 +4,24 @@ function loadLector(){
 		const $resultados = document.querySelector("#resultado");
 		Quagga.init({
 			inputStream: {
+				constraints: {
+				width: 640,
+				height: 480,
+				facing: "environment"
+				},
 				name: "Live",
 				type: "LiveStream",
-				constraints: {
-					  width: 640,
-					  height: 480,
-					  facing: "environment"
-				  }
+				target: document.querySelector('#contenedor'), // Pasar el elemento del DOM
 			},
 			locator: {
-			  patchSize: "medium",
-			  halfSample: true
-			},
-			numOfWorkers: 4,
-			locate: true,
-			decoder : {
+				patchSize: "medium",
+				halfSample: true
+			  },
+			  numOfWorkers: 4,
+			  locate: true,
+			decoder: {
 				readers: ["upc_reader", "ean_reader"]
+				// readers: ["upc_reader"]
 			}
 		}, function (err) {
 			if (err) {
@@ -33,8 +35,8 @@ function loadLector(){
 		Quagga.onDetected((data) => {
 			$resultados.textContent = data.codeResult.code;
 
-			// const datos = data.codeResult.code;
-			// // const result = datos.indexOf(0,0);       
+			//const datos = data.codeResult.code;
+			// const result = datos.indexOf(0,0);       
 	
 			// if(datos.indexOf(0)===0){
 			// 	// alert("0 esta adelante")

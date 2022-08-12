@@ -32,9 +32,6 @@ canvas.drawingBuffer{
 }
 .contCamara{
     background: white;
- 
-    text-align: center;
-    justify-content: center;
     
 }
 .btnSelect{background-color: white; border-style: none;

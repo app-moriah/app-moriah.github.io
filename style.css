@@ -12,7 +12,7 @@ body{
 }
 #contenedor{
 	max-width: 100%;
-	position:relative;
+	/*position:relative;*/
 }
 canvas{
 	max-width: 100%;

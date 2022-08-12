@@ -7,8 +7,10 @@ function loadLector(){
 				 constraints: {
 				 	//width: 1920,
 				 	//height: 1080,
-					 width: 800,
-				 	height: 600,
+					// width: 800,
+				 	//height: 600,
+					 width: 600,
+					 height: 400,
 				 },
 				name: "Live",
 				type: "LiveStream",

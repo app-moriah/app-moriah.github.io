@@ -1,0 +1,43 @@
+:root {--main-color: #1f8fc3;--hovercolor:#145F82;--color-dark: #1D2231;--text-grey: #8390A2;}
+* {padding: 0; margin: 0; box-sizing: border-box;list-style-type: none;
+    text-decoration: none;font-family: 'Poppins', sans-serif;}
+
+body{
+    background: #f1f5f9;
+  
+}
+#contenedor video{
+	max-width: 100%;
+	width: 100%;
+}
+#contenedor{
+	max-width: 100%;
+	position:relative;
+}
+canvas{
+	max-width: 100%;
+}
+canvas.drawingBuffer{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.result{
+    background: white;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 4%);
+    /* height: 30px; */
+    margin: 10px;
+    display: flex;
+}
+.contCamara{
+    background: white;
+ 
+    text-align: center;
+    justify-content: center;
+    
+}
+.btnSelect{background-color: white; border-style: none;
+    border-radius:  5px; border: 1px solid #ecedf1; padding: 6px; margin-bottom: -7; margin-top: 5px; margin-left: 30px;}
+.btnSelect:hover{ background: var(--main-color);cursor: pointer; color: white;}
+.inpA{  border: none;}

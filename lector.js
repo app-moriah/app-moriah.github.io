@@ -4,10 +4,10 @@ function loadLector(){
 		const $resultados = document.querySelector("#resultado");
 		Quagga.init({
 			inputStream: {
-				// constraints: {
-				// 	width: 1920,
-				// 	height: 1080,
-				// },
+				 constraints: {
+				 	width: 1920,
+				 	height: 1080,
+				 },
 				name: "Live",
 				type: "LiveStream",
 				target: document.querySelector('#contenedor'), // Pasar el elemento del DOM
